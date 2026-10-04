@@ -1,0 +1,34 @@
+{
+  "name": "data4ummah-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "app:add": "cap add android && cap add ios",
+    "app:sync": "cap sync",
+    "app:android": "cap open android",
+    "app:ios": "cap open ios",
+    "app:icons": "capacitor-assets generate --iconBackgroundColor #D97757 --splashBackgroundColor #F5F0E8"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.14",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/ios": "^6.1.2",
+    "@capacitor/assets": "^3.0.5"
+  }
+}

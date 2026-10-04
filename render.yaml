@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: data4ummah
+    runtime: docker
+    plan: starter            # a disk needs a paid plan, so user data survives restarts
+    healthCheckPath: /health
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: PAYSTACK_BANK
+        value: test-bank
+      - key: VTPASS_BASE
+        value: https://sandbox.vtpass.com
+      - key: VTPASS_API_KEY
+        sync: false
+      - key: VTPASS_SECRET_KEY
+        sync: false
+      - key: MOCK_VTU
+        value: "true"
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false

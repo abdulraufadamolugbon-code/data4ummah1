@@ -1,0 +1,2 @@
+{ "appId": "com.data4ummah.app", "appName": "DATA 4 UMMAH", "webDir": "public",
+  "android": { "allowMixedContent": false }, "ios": { "contentInset": "always" } }
